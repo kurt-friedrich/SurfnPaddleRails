@@ -1,0 +1,191 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oxygen', sans-serif;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 82px;
+  font-weight: bold;
+  color: #66ffe0;
+}
+
+h2 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  font-size: 57px;
+  color: #333;
+}
+
+h4 {
+  font-weight: bold;
+  color: #00b38f;
+}
+
+a {
+  font-size: 12px;
+  color: 	#bfc4c8;
+}
+
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #00b38f;
+}
+
+blockquote {
+  border-left: 5px solid #66ffe0;
+  font-size: 21px;
+  color: #333;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.no-marg {
+  margin: 0;
+}
+
+#page-header {
+  display: flex;
+  max-width: 1300px;
+  height: 40vw;
+  background-image: url(app/assets/images/header.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.navbar .container-fluid {
+  width: 80%;
+}
+
+#site-title {
+  flex: 1;
+  align-self: center;
+}
+
+#site-title p {
+  color: #cacecd;
+}
+
+#small-avatar {
+  height: 22px;
+}
+
+.navbar {
+  max-width: 1300px;
+  margin: 0 auto;
+  border: 0;
+  background-image: url(app/assets/images/header.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.navbar .container-fluid .navbar-header .navbar-brand {
+  padding-top: 7px;
+  color: #66ffe0;
+}
+
+#surf-svg {
+  display: inline-block;
+  height: 40px;
+  margin-right: 1em;
+}
+
+.navbar-default .container-fluid ul li {
+  float: right;
+}
+
+.navbar-default .navbar-nav li a {
+  font-size: 16px;
+  color: #66ffe0;
+}
+
+#rotate {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+  color: #66ffe0;
+}
+
+.page-footer {
+  max-width: 1300px;
+  margin-top: 5%;
+  border-top: 1px solid #e6e6e6;
+}
+
+#footer-title {
+  margin-top: .5em;
+}
+
+.stories {
+  display: flex;
+  margin-top: 3%;
+}
+
+.flex1 {
+  position: relative;
+  flex: 1;
+}
+
+.footer-story {
+  position: absolute;
+  bottom: .1em;
+  left: .5em;
+  max-width: 90%;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #66ffe0;
+}
+
+.footer-bottom {
+  padding: 2.5% 12.5% 2.5% 12.5%;
+  background-color: #181b1a;
+}
+
+.footer-bottom img {
+  height: 36px;
+}
+
+.footer-bottom div p {
+  display: inline-block;
+  font-size: 12px;
+  color: #bfc4c8;
+}
+
+.footer-bottom ul {
+  float: right;
+  margin-top: .4em;
+}
+
+.footer-bottom ul li {
+  border-right: 1px solid #bfc4c8;
+}
