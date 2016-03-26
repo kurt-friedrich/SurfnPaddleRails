@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'posts/(:id)' => 'posts#show', as: :post
 
+  get '/about' => 'about#index', as: :about
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
