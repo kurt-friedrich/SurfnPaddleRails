@@ -138,7 +138,7 @@ class Post
             The King of the Apes was so enraged at his reply that he ordered him to be taken away and clawed to death.
           ),
           created_at:   rand(6).months.ago,
-          image: 'footer1'
+          image: 'footer5'
         )
       ]
     end

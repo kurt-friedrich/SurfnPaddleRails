@@ -51,7 +51,7 @@
       <% @posts.each do |post| %>
         <div class="flex1">
           <%= link_to (image_tag (post.image), alt: post.title, class: "img-responsive"), post_path(post.id) %>
-          <p class="footer-story"> <%= post.title %></p>
+          <p class="footer-story"> <%= link_to post.title, post_path(post.id) %></p>
         </div>
       <% end %>
     </div>
