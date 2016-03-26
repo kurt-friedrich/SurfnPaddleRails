@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @posts = Post.all
     @post = @posts.detect { |p| p.id == params[:id].to_i }
     @posts -= [@post]
-    render index
+    render 'index'
   end
 
 end
