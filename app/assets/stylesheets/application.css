@@ -74,7 +74,7 @@ blockquote {
   display: flex;
   max-width: 1300px;
   height: 40vw;
-  background-image: url(app/assets/images/header.jpg);
+  background-image: url(/assets/header.jpg);
   background-size: contain;
   background-attachment: fixed;
 }
@@ -100,7 +100,7 @@ blockquote {
   max-width: 1300px;
   margin: 0 auto;
   border: 0;
-  background-image: url(app/assets/images/header.jpg);
+  background-image: url(/assets/header.jpg);
   background-size: contain;
   background-attachment: fixed;
 }

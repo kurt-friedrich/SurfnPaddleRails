@@ -7,7 +7,7 @@
           <p id="post-author">
             <a href="#"><%= image_tag 'avatar', alt: "author avatar", class: "img-circle", id: "small-avatar" %> <%= @post.author %></a>
             on
-            <a href="#"><%= @post.created_at %></a>
+            <a href="#"><%= @post.created_at.to_date.to_s(:rfc822) %></a>
           </p>
         </div>
       </div>
