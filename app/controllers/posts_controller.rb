@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.all
+    @posts = Post.sorted
     @post = Post.find(params[:id].to_i)
     @posts -= [@post]
     render 'index'
