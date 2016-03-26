@@ -1,6 +1,6 @@
 class Post
 
-  attr_accessor :id, :title, :body, :author, :created_at
+  attr_accessor :id, :title, :body, :author, :created_at, :image
 
   def initialize(args)
     self.id         = args[:id]
@@ -8,6 +8,7 @@ class Post
     self.body       = args[:body]
     self.author     = args[:author]
     self.created_at = args[:created_at] || Time.now
+    self.image      = args[:image]
   end
 
   def self.all
@@ -36,7 +37,8 @@ class Post
 
             The King of the Apes was so enraged at his reply that he ordered him to be taken away and clawed to death.
           ),
-          created_at:   rand(6).months.ago
+          created_at:   rand(6).months.ago,
+          image: 'footer1'
         ),
         Post.new(
           id: 2,
@@ -57,7 +59,8 @@ class Post
 
             However, chaff and nonsense aside, I think I honor and appreciate your Pilgrim stock as much as you do yourselves, perhaps; and I endorse and adopt a sentiment uttered by a grandfather of mine once - a man of sturdy opinions, of sincere make of mind, and not given to flattery. He said: "People may talk as they like about that Pilgrim stock, but, after all's said and done, it would be pretty hard to improve on those people; and, as for me, I don't mind coming out flatfooted and saying there ain't any way to improve on them - except having them born in, Missouri!"
           ),
-          created_at:   rand(6).months.ago
+          created_at:   rand(6).months.ago,
+          image: 'footer2'
         ),
         Post.new(
           id: 3,
@@ -82,7 +85,8 @@ class Post
 
             The King of the Apes was so enraged at his reply that he ordered him to be taken away and clawed to death.
           ),
-          created_at:   rand(6).months.ago
+          created_at:   rand(6).months.ago,
+          image: 'footer3'
         ),
         Post.new(
           id: 4,
@@ -107,7 +111,8 @@ class Post
 
             The King of the Apes was so enraged at his reply that he ordered him to be taken away and clawed to death.
           ),
-          created_at:   rand(6).months.ago
+          created_at:   rand(6).months.ago,
+          image: 'footer4'
         ),
         Post.new(
           id: 5,
@@ -132,7 +137,8 @@ class Post
 
             The King of the Apes was so enraged at his reply that he ordered him to be taken away and clawed to death.
           ),
-          created_at:   rand(6).months.ago
+          created_at:   rand(6).months.ago,
+          image: 'footer1'
         )
       ]
     end
