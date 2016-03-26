@@ -189,3 +189,7 @@ blockquote {
 .footer-bottom ul li {
   border-right: 1px solid #bfc4c8;
 }
+
+.footer-bottom ul li:last-child {
+  border-right: none;
+}
