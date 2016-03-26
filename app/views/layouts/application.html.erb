@@ -41,20 +41,22 @@
 
   <%= yield %>
 
-  <div class="container-fluid page-footer">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="text-center" id="footer-title">MOST POPULAR POSTS</h2>
-      </div>
-    </div>
-    <div class="row stories">
-      <% @posts.each do |post| %>
-        <div class="flex1">
-          <%= link_to (image_tag (post.image), alt: post.title, class: "img-responsive"), post_path(post.id) %>
-          <p class="footer-story"> <%= link_to post.title, post_path(post.id) %></p>
+  <% unless controller_name == 'about' && action_name == 'index' %>
+    <div class="container-fluid page-footer">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center" id="footer-title">MOST POPULAR POSTS</h2>
         </div>
-      <% end %>
-    </div>
+      </div>
+      <div class="row stories">
+        <% @posts.each do |post| %>
+          <div class="flex1">
+            <%= link_to (image_tag (post.image), alt: post.title, class: "img-responsive"), post_path(post.id) %>
+            <p class="footer-story"> <%= link_to post.title, post_path(post.id) %></p>
+          </div>
+        <% end %>
+      </div>
+  <% end %>
     <div class="row footer-bottom">
       <div class="col-md-12">
         <%= image_tag 'iron-yard-logo', alt: "TIY logo" %>
