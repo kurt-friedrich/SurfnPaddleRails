@@ -19,7 +19,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid no-pad" id="site-nav">
         <div class="navbar-header col-md-5 no-pad">
-          <a class="navbar-brand" href="#"><img id="surf-svg" src="img/logo-surf-and-paddle.svg" alt="" />MVMNT</a>
+          <a class="navbar-brand" href="#"><%= image_tag 'logo-surf-and-paddle', alt: "MVMNT logo", id: "surf-svg" %>MVMNT</a>
         </div>
         <ul class="nav navbar-nav navbar-right col-md-5 no-pad">
           <li><a href="#">search <span class="glyphicon glyphicon-search" id="rotate"></span></a></li>
@@ -63,7 +63,7 @@
     </div>
     <div class="row footer-bottom">
       <div class="col-md-12">
-        <img src="img/iron-yard-logo.svg" alt="" />
+        <%= image_tag 'iron-yard-logo', alt: "TIY logo" %>
         <p class="no-marg">The Ironyard Copyright 2013, All Rights Reserved</p>
         <ul class="list-inline">
           <li><a href="#">Nav Item 1</a></li>
