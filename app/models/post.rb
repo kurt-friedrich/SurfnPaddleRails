@@ -146,7 +146,7 @@ class Post
   end
 
   def self.find(id)
-    all.select{|post| post.id == id}.first
+    all.detect { |post| post.id == id }
   end
 
 

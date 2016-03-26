@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def show
     @posts = Post.all
-    @post = @posts.detect { |p| p.id == params[:id].to_i }
+    @post = Post.find(params[:id].to_i)
     @posts -= [@post]
     render 'index'
   end
