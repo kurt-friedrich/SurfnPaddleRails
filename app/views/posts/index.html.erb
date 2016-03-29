@@ -1,0 +1,48 @@
+<% title @post.title %>
+
+<div class="container" id="page-body">
+  <div class="row">
+    <div class="col-md-8 no-pad">
+      <div class="row">
+        <div class="col-md-12 column-top">
+          <h2><%= @post.title %></h2>
+          <p id="post-author">
+            <a href="#"><%= image_tag 'avatar', alt: "author avatar", class: "img-circle", id: "small-avatar" %> <%= @post.author %></a>
+            on
+            <a href="#"><%= @post.created_at.to_date.to_s(:rfc822) %></a>
+          </p>
+        </div>
+      </div>
+      <p><%= simple_format @post.body %></p>
+    </div>
+    <div class="col-md-3 col-md-push-1 no-pad">
+      <div class="row">
+        <div class="col-md-12 column-top">
+          <a href="#">
+            <%= image_tag 'avatar', alt: "author avatar", class: "img-circle img-responsive", id: "user-avatar" %>
+            <p class="text-center user-name no-marg"><%= @post.author%></p>
+          </a>
+          <ul class="list-inline text-center">
+            <li><a href="#" >Twitter</a></li>
+            <li><a href="#" >Facebook</a></li>
+            <li><a href="#" >Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= image_tag 'sidebar-ad', alt: "advertisement", class: "img-responsive", id: "sidebar-ad" %>
+          <p class="text-right">
+            <a href="#">About This Ad</a>
+          </p>
+        </div>
+      </div>
+      <div class="row" id="sidebar-bottom">
+        <div class="col-md-12">
+          <h4>SIDEBAR HEADING</h4>
+          <p id="sidebar-text">Crucifix polaroid umami, roof party normcore truffaut gentrify. Wolf YOLO echo park bushwick you probably haven't heard of them. Sriracha cronut selvage hoodie, echo park meh messenger bag pug post-ironic polaroid helvetica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

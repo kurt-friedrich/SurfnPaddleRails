@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= favicon_link_tag %>
+  <title><%= yield(:title) %></title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container-fluid no-pad" id="page-header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid no-pad" id="site-nav">
+        <div class="navbar-header col-md-5 no-pad">
+          <a class="navbar-brand" href="#"><%= image_tag 'logo-surf-and-paddle', alt: "MVMNT logo", id: "surf-svg" %>MVMNT</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right col-md-5 no-pad">
+          <li><a href="#">search <span class="glyphicon glyphicon-search" id="rotate"></span></a></li>
+          <li><%= link_to 'about', about_path %></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="row" id="site-title">
+      <div class="col-md-12 text-center">
+        <h1 class="text-center no-marg">MVMNT</h1>
+        <p>music + stuff</p>
+      </div>
+    </div>
+  </div>
+
+  <%= yield %>
+
+  <% unless controller_name == 'about' && action_name == 'index' %>
+    <div class="container-fluid page-footer">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center" id="footer-title">MOST POPULAR POSTS</h2>
+        </div>
+      </div>
+      <div class="row stories">
+        <% @posts.each do |post| %>
+          <div class="flex1">
+            <%= link_to (image_tag (post.image), alt: post.title, class: "img-responsive"), post_path(post.id) %>
+            <p class="footer-story"> <%= link_to post.title, post_path(post.id) %></p>
+          </div>
+        <% end %>
+      </div>
+  <% end %>
+    <div class="row footer-bottom">
+      <div class="col-md-12">
+        <%= image_tag 'iron-yard-logo', alt: "TIY logo" %>
+        <p class="no-marg">The Ironyard Copyright 2013, All Rights Reserved</p>
+        <ul class="list-inline">
+          <li><a href="#">Nav Item 1</a></li>
+          <li><a href="#">Nav Item 2</a></li>
+          <li><a href="#">Nav Item 3</a></li>
+          <li><a href="#">Nav Item 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
