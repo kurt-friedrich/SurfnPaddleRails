@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+  belongs_to :author
+
   def self.find(id)
     all.detect { |post| post.id == id }
   end
