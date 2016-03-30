@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    posts
     @post = Post.new(post_params)
     if @post.save
       redirect_to posts_path
@@ -21,13 +22,17 @@ class PostsController < ApplicationController
   end
 
   def edit
+    posts
+    @post = Post.find(params[:id].to_i)
+    @posts -= [@post]
   end
 
   def update
+    @post = Post.find(params[:id].to_i)
     if @post.update(post_params)
       redirect_to @post
     else
-      render :new
+      render :edit
     end
   end
 
@@ -39,7 +44,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body, :author_id)
+    params.require(:post).permit(:title, :body, :author_id, :image)
   end
 
 end

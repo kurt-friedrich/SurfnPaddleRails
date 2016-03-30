@@ -1,3 +1,15 @@
+<% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+    <ul>
+    <% @post.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <div class="field-group">
   <%= f.label :title %>
   <%= f.text_field :title, class: 'field-control' %>
@@ -9,4 +21,8 @@
 <div>
   <%= f.label :body %>
   <%= f.text_area :body, rows: 10 %>
+</div>
+<div>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
 </div>

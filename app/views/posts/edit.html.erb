@@ -1,8 +1,8 @@
-<h2>New Post</h2>
+<h2>Editing '<%= @post.title %>'</h2>
 
 <%= form_for @post do |f| %>
   <%= render partial: 'form', :locals => {f: f} %>
   <div>
-    <%= f.submit "Create Post" %>
+    <%= f.submit "Update Post" %>
   </div>
 <% end %>

@@ -154,6 +154,11 @@ blockquote {
   flex: 1;
 }
 
+/*.flex1 .img-responsive {
+  width: 325px;
+  height: 330px;
+}*/
+
 .footer-story {
   position: absolute;
   bottom: .1em;

@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
-
   belongs_to :author
+  validates :title, :body, :author_id, presence: true
 
   def self.find(id)
     all.detect { |post| post.id == id }
