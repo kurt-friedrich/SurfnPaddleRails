@@ -7,7 +7,7 @@
         <div class="col-md-12 column-top">
           <h2><%= @post.title %></h2>
           <p id="post-author">
-            <a href="#"><%= image_tag 'avatar', alt: "author avatar", class: "img-circle", id: "small-avatar" %> <%= @post.author %></a>
+            <a href="#"><%= image_tag (@post.author.avatar), alt: "author avatar", class: "img-circle", id: "small-avatar" %> <%= @post.author.name %></a>
             on
             <a href="#"><%= @post.created_at.to_date.to_s(:rfc822) %></a>
           </p>
@@ -19,8 +19,8 @@
       <div class="row">
         <div class="col-md-12 column-top">
           <a href="#">
-            <%= image_tag 'avatar', alt: "author avatar", class: "img-circle img-responsive", id: "user-avatar" %>
-            <p class="text-center user-name no-marg"><%= @post.author%></p>
+            <%= image_tag (@post.author.avatar), alt: "author avatar", class: "img-circle img-responsive", id: "user-avatar" %>
+            <p class="text-center user-name no-marg"><%= @post.author.name%></p>
           </a>
           <ul class="list-inline text-center">
             <li><a href="#" >Twitter</a></li>
