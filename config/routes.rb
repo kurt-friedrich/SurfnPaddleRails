@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  resources :posts
 
   root 'posts#index'
-
-  get 'posts/(:id)' => 'posts#show', as: :post
 
   get '/about' => 'about#index', as: :about
 
